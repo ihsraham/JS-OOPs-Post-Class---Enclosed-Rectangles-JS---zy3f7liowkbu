@@ -9,17 +9,32 @@
 function updateStructure(rec1, rec2) {
   //write your code
   let rec = {};
-  rec.top = Math.min(rec1.top, rec2.top);
-  rec.left = Math.min(rec1.left, rec2.left);
-  rec.height = Math.max(rec1.height, rec2.height);
-  rec.width = Math.max(rec1.width, rec2.width);
+  rec.top =
+    String(Math.min(parseInt(rec1.top, 10), parseInt(rec2.top, 10))) + "px";
+  rec.left =
+    String(Math.min(parseInt(rec1.left, 10), parseInt(rec2.left, 10))) + "px";
+  rec.height =
+    String(Math.max(parseInt(rec1.height, 10), parseInt(rec2.height, 10))) +
+    "px";
+  rec.width =
+    String(Math.max(parseInt(rec1.width, 10), parseInt(rec2.width, 10))) + "px";
   rec.children = [];
   let childObj = {};
-  childObj.top = Math.max(rec1.top, rec2.top) - Math.min(rec1.top, rec2.top);
+  childObj.top =
+    String(
+      Math.max(parseInt(rec1.top, 10), parseInt(rec2.top, 10)) -
+        Math.min(parseInt(rec1.top, 10), parseInt(rec2.top, 10))
+    ) + "px";
   childObj.left =
-    Math.max(rec1.left, rec2.left) - Math.min(rec1.left, rec2.left);
-  childObj.height = Math.min(rec1.height, rec2.height);
-  childObj.width = Math.min(rec1.width, rec2.width);
+    String(
+      Math.max(parseInt(rec1.left, 10), parseInt(rec2.left, 10)) -
+        Math.min(parseInt(rec1.left, 10), parseInt(rec2.left, 10))
+    ) + "px";
+  childObj.height =
+    String(Math.min(parseInt(rec1.height, 10), parseInt(rec2.height, 10))) +
+    "px";
+  childObj.width =
+    String(Math.min(parseInt(rec1.width, 10), parseInt(rec2.width, 10))) + "px";
   rec.children.push(childObj);
   return rec;
 }
