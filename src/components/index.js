@@ -35,6 +35,7 @@ function updateStructure(rec1, rec2) {
     "px";
   childObj.width =
     String(Math.min(parseInt(rec1.width, 10), parseInt(rec2.width, 10))) + "px";
+  childObj.children = [];
   rec.children.push(childObj);
   return rec;
 }
