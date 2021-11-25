@@ -24,16 +24,16 @@ function updateStructure(rec1, rec2) {
     height1 >= height2 &&
     width1 >= width2
   ) {
-    rec.top = top1;
-    rec.left = left1;
-    rec.height = height1;
-    rec.width = width1;
+    rec.top = top1 + "px";
+    rec.left = left1 + "px";
+    rec.height = height1 + "px";
+    rec.width = width1 + "px";
     let children = [];
     let objChild = {};
-    objChild.top = top2 - top1;
-    objChild.left = left2 - left1;
-    objChild.width = width2;
-    objChild.height = height2;
+    objChild.top = top2 - top1 + "px";
+    objChild.left = left2 - left1 + "px";
+    objChild.width = width2 + "px";
+    objChild.height = height2 + "px";
     objChild.children = [];
     children.push(objChild);
     rec.children = children;
@@ -43,16 +43,16 @@ function updateStructure(rec1, rec2) {
     height2 >= height1 &&
     width2 >= width1
   ) {
-    rec.top = top2;
-    rec.left = left2;
-    rec.height = height2;
-    rec.width = width2;
+    rec.top = top2 + "px";
+    rec.left = left2 + "px";
+    rec.height = height2 + "px";
+    rec.width = width2 + "px";
     let children = [];
     let objChild = {};
-    objChild.top = top1 - top2;
-    objChild.left = left1 - left2;
-    objChild.width = width1;
-    objChild.height = height1;
+    objChild.top = top1 - top2 + "px";
+    objChild.left = left1 - left2 + "px";
+    objChild.width = width1 + "px";
+    objChild.height = height1 + "px";
     objChild.children = [];
     children.push(objChild);
     rec.children = children;
