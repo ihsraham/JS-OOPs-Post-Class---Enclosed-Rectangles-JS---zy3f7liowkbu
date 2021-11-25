@@ -57,7 +57,7 @@ function updateStructure(rec1, rec2) {
     children.push(objChild);
     rec.children = children;
   } else {
-    rec = rec1;
+    return rec1;
   }
   return rec;
 }
